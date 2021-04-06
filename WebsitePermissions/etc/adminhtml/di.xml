@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Catalog\Controller\Adminhtml\Product\Edit">
+        <plugin name="product_view" type="BoostMyShop\WebsitePermissions\Plugin\Controller\Adminhtml\Product\Edit"/>
+    </type>
+    <type name="Magento\Catalog\Model\ResourceModel\Product\Collection">
+        <plugin name="before_product_collection_load" type="BoostMyShop\WebsitePermissions\Plugin\Catalog\Model\ResourceModel\Product\Collection" />
+    </type>
+</config>
